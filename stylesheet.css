@@ -1,52 +1,93 @@
-.calculator {
-    text-align: center;
-    margin: 0 auto;
-    padding-top: 200px;
-    width: 400px;
+html, body,
+ul, ol, li,
+h1, h2, h3, h4, h5, h6, p, form, input, div {
+  margin: 0;
+  padding: 0;
 }
 
-.calculator-screen {
-    width: 100%;
-    height: 100px;
-    background-color: #252525;
-    color: #fff;
+.header {
+    background-image: linear-gradient(rgba(250, 250, 250, 0.7), rgba(250, 250, 250, 0.7)), url(bg.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 1000px;
+}
+
+.header-list {
+    flex: 1;
     text-align: right;
-    border: none;
-    padding: 0 20px;
-    box-sizing: border-box;
 }
 
-.calculator-keys {
+.header-list ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 30px 20px;
+    position: relative;
+}
+
+.header-list ul li a {
+    color:rgba(75, 75, 75, 0.7);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.header-list ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #FFD523;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.header-list ul li:hover::after {
     width: 100%;
 }
 
-.row {
-    display: flex;
+.main {
+    width: 100%;
+    color: rgb(116, 116, 116);
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%;)
 }
 
-button {
-    height: 80px;
-    background-color: gray;
-    border: 1px solid black;
-    font-size: 32px;
-    color: #fff;
-    width: 25%;
-    outline: none;
+.main h1 {
+    font-size: 60px;
+    text-align: center;
 }
 
-.all-clear, .zero-btn {
-    width: 50%;
+.main p {
+    font-size: 18px;
+    text-align: center;
+    margin: 10px 0 40px;
 }
 
-.operator, .equal-sign {
-    background-color: orange;
+.hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(116, 116, 116);
+    border: 1px solid rgb(116, 116, 116);
+    padding: 15px 35px;
+    font-size: 15px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
 }
 
-.button:hover {
-    background-color: darkgrey;
+.hero-btn:hover {
+    border: 1px solid #FFD523;
+    background: #FFD523;
+    transition: 1s;
 }
 
-.operator:hover, .equal-sign:hover {
-    background-color: darkorange;
+.FYJ {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
 }
+
 
